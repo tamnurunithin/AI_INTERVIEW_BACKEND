@@ -10,10 +10,10 @@ venv/
 # VS Code
 .vscode/
 
-# Uploads
+# Uploaded resumes
 uploads/
 
-# Vector DB
+# Generated FAISS index
 vector_db/
 
 # Logs
