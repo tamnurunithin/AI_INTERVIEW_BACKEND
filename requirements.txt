@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+python-multipart
+pydantic
+groq
+pydantic-settings
+PyMuPDF
+google-genai
+faiss-cpu
+numpy
