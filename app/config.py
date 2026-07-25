@@ -6,22 +6,22 @@ class Settings(BaseSettings):
     # App Configuration
     # ===============================
 
-    APP_NAME: str
-    APP_VERSION: str
-    DEBUG: bool
+    APP_NAME: str = "AI Interview Coach"
+    APP_VERSION: str = "1.0.0"
+    DEBUG: bool = False
 
     # ===============================
     # Server Configuration
     # ===============================
 
-    HOST: str
-    PORT: int
+    HOST: str = "0.0.0.0"
+    PORT: int = 8000
 
     # ===============================
     # Frontend Configuration
     # ===============================
 
-    FRONTEND_URL: str
+    FRONTEND_URL: str = "http://localhost:5173"
 
     # ===============================
     # Gemini API Configuration
