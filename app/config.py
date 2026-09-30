@@ -2,6 +2,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
+
     # ===============================
     # App Configuration
     # ===============================
@@ -10,6 +11,7 @@ class Settings(BaseSettings):
     APP_VERSION: str = "1.0.0"
     DEBUG: bool = False
 
+
     # ===============================
     # Server Configuration
     # ===============================
@@ -17,11 +19,13 @@ class Settings(BaseSettings):
     HOST: str = "0.0.0.0"
     PORT: int = 8000
 
+
     # ===============================
     # Frontend Configuration
     # ===============================
 
     FRONTEND_URL: str = "http://localhost:5173"
+
 
     # ===============================
     # Gemini API Configuration
@@ -29,11 +33,20 @@ class Settings(BaseSettings):
 
     GEMINI_API_KEY: str
 
+
     # ===============================
     # Groq API Configuration
     # ===============================
 
     GROQ_API_KEY: str
+
+    # Groq LLM Model
+    GROQ_MODEL: str = "openai/gpt-oss-120b"
+
+
+    # ===============================
+    # Environment Configuration
+    # ===============================
 
     model_config = SettingsConfigDict(
         env_file=".env",
