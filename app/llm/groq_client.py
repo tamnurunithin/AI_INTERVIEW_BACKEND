@@ -7,13 +7,23 @@ from app.config import settings
 # Groq Client
 # ==========================================
 
+if not settings.GROQ_API_KEY:
+    raise ValueError(
+        "GROQ_API_KEY is missing. "
+        "Add it to your .env file or deployment environment variables."
+    )
+
+
 client = Groq(
     api_key=settings.GROQ_API_KEY
 )
 
 
+# ==========================================
 # Default Model
-MODEL_NAME = "llama-3.3-70b-versatile"
+# ==========================================
+
+MODEL_NAME = settings.GROQ_MODEL
 
 
 # ==========================================
@@ -26,7 +36,7 @@ def generate_response(
     max_tokens: int = 1024,
 ):
     """
-    Sends a prompt to Groq Llama model
+    Sends a prompt to the Groq LLM
     and returns the generated response.
     """
 
